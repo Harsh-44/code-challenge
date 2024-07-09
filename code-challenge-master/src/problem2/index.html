@@ -1,0 +1,57 @@
+<html>
+
+<head>
+  <title>Fancy Form</title>
+
+  <!-- You may add more stuff here -->
+  <link href="style.css" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+</head>
+
+<body>
+  <div class="wrapper">
+    <header>Swap</header>
+    <form onsubmit="return false;">
+      <div class="drop-list">
+        <div class="send-wrapper">
+          <div class="send-elements">
+            <label class="send-amount" for="send-amount">Amount to send:</label>
+            <div class="send">
+              <select id="send-currency" class="currency-select"></select>
+              <img id="send-icon" class="currency-icon" src="" alt="Send Icon" />
+            </div>
+          </div>
+          <input id="sendinput" class="sendinput" id="send-amount"/>
+        </div>
+        <div class="swap-button-container">
+          <button class="swap-button" type="button" onclick="swapTokens()">
+            <i class="fas fa-exchange-alt fa-rotate-90"></i>
+          </button>
+        </div>
+        <div class="receive-wrapper">
+          <div class="receive-elements">
+              <label class="receive-amount" for="receive-amount">Amount to receive:</label>
+              <div class="receive">
+                <select id="receive-currency" class="currency-select"></select>
+                <img id="receive-icon" class="currency-icon" src="" alt="Receive Icon" />
+              </div>
+            </div>
+            <input id="receive-input" class="receive-input" id="receive-amount"/>
+          </div>
+          <div class="exchange-rate" id="exchange-rate"></div>
+        </div>
+      <button id="submit" class="submit" onclick="submitClicked()">Confirm Swap</button>
+      <div class="modal" id="modal">
+        <div class="modal-inner">
+          <h2>Confirm?</h2>
+          <p id="modal-message"></p>
+          <button id="closeModal">Close</button>
+        </div>
+      </div>
+    </form>
+  </div>
+  <script src="script.js"></script>
+</body>
+
+</html>
+
